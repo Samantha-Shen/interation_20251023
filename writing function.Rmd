@@ -290,3 +290,24 @@ nsduh_results =
   )
 ```
 
+
+## Functions as arguments
+
+```{r}
+x_vec = rnorm(25, 0, 1)
+
+my_summary = function(x, summ_func) {
+  summ_func(x)
+}
+
+my_summary(x_vec, sd)
+```
+
+```{r}
+my_summary(x_vec, IQR)
+```
+
+
+```{r}
+my_summary(x_vec, var)
+```
